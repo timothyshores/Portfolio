@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div>
             <header className={headerStyles.header}>
-                <h1>Gatsby Bootcamp Tutorial</h1>
+                <h1><Link className={headerStyles.title} to="/">Gatsby Bootcamp Tutorial</Link></h1>
             </header>
             <nav>
                 <ul>
