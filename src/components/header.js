@@ -5,7 +5,7 @@ import headerStyles from './header.module.scss'
 const Header = () => {
     return (
         <div>
-            <header>
+            <header className={headerStyles.header}>
                 <h1>Gatsby Bootcamp Tutorial</h1>
             </header>
             <nav>
