@@ -14,8 +14,8 @@
 .nav-list {
     display: flex;
     list-style-type: none;
-    margin: 0;
     justify-content: space-evenly;
+    padding: 0 0 0.75rem;
 }
 
 .nav-item {
@@ -29,4 +29,11 @@
         letter-spacing: 0.5px;
         font-size: .925rem;
     }
+}
+
+.active-nav-item {
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: .925rem;
 }
