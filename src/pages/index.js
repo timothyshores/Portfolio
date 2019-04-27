@@ -1,3 +1,3 @@
 import React from "react"
 
-export default () => <div>Hello world!</div>
+export default () => <div>Gatsby JS - The Great Gatsby Bootcamp</div>
