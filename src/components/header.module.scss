@@ -23,4 +23,10 @@
     font-size: .9rem;
     margin-right: 1.3rem;
     text-decoration: none;
+    &:hover {
+        color: #666;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        font-size: .925rem;
+    }
 }
