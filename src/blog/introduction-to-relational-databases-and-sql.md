@@ -5,7 +5,11 @@ date: "2019-04-29"
 
 ![Introduction to Relational Databases and SQL Stock Photo](../images/introduction-to-relational-databases-and-sql.jpg)
 
+<center>
+
 *Image by [Pam Baker](https://www.pcmag.com/author-bio/pam-baker "Pam Baker") via [PCMag](https://www.pcmag.com/article/362836/google-simplifies-machine-learning-with-sql "PCMag")*
+
+</center>
 
 ___  
 
@@ -167,3 +171,4 @@ Get a list of employees who's last name ends with *"...an"*
 SELECT * FROM Employees
 WHERE Lastname like '%an'
 ```
+___

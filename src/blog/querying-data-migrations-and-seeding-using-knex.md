@@ -1,6 +1,6 @@
 ---
-title: "Second Blog Post"
-date: "2019-04-30"
+title: "Querying Data, Migrations and Seeding using knex"
+date: "2019-05-01"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Bibendum enim facilisis gravida neque convallis a cras. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Est sit amet facilisis magna etiam tempor orci. Nisl rhoncus mattis rhoncus urna neque viverra justo. Euismod in pellentesque massa placerat duis ultricies lacus sed. Libero id faucibus nisl tincidunt eget. Lorem ipsum dolor sit amet consectetur adipiscing. Vitae nunc sed velit dignissim sodales ut.
