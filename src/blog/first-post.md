@@ -1,16 +1,89 @@
 ---
-title: "My First Blog Post"
+title: "Introduction to Relational Databases and SQL"
 date: "2019-04-25"
 ---
 
-##Lorem Header
+# Introduction to Relational Databases and SQL
 
-1. Lorem
-2. Ipsum
-3 Lorem lorem ipsum
+___
+  
+__Acronyms__
+- DBMS - Database Management System
+- RDBMS - Relaional Database Management System
+- SQ: -  Structured Query Language
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Bibendum enim facilisis gravida neque convallis a cras. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Est sit amet facilisis magna etiam tempor orci. Nisl rhoncus mattis rhoncus urna neque viverra justo. Euismod in pellentesque massa placerat duis ultricies lacus sed. Libero id faucibus nisl tincidunt eget. Lorem ipsum dolor sit amet consectetur adipiscing. Vitae nunc sed velit dignissim sodales ut.
+__Definitions__
+- Schema - the structure of a database
+___
 
-In pellentesque massa placerat duis ultricies lacus sed turpis. Risus sed vulputate odio ut enim. Lacus vel facilisis volutpat est velit egestas dui id. Commodo elit at imperdiet dui accumsan sit amet nulla facilisi. Lorem sed risus ultricies tristique nulla aliquet. Aliquet nec ullamcorper sit amet risus nullam eget felis. Imperdiet proin fermentum leo vel orci. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. Pellentesque habitant morbi tristique senectus et netus. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Bibendum enim facilisis gravida neque convallis a cras.
+A good or bad database can make or break an entire application. As an example when submitting your Airtable daily retrospective form when hundreds of other Lambda students are submitting a daily retrospective form.
 
-Sit amet est placerat in egestas erat imperdiet. In mollis nunc sed id semper. Non arcu risus quis varius quam quisque id. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Odio aenean sed adipiscing diam. Sed odio morbi quis commodo odio aenean sed. Etiam dignissim diam quis enim lobortis scelerisque fermentum. Erat velit scelerisque in dictum non consectetur a. Suspendisse interdum consectetur libero id. Dolor purus non enim praesent. Blandit cursus risus at ultrices mi tempus imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Urna neque viverra justo nec ultrices. Posuere morbi leo urna molestie at elementum eu facilisis. Velit scelerisque in dictum non consectetur a erat nam at. Eu feugiat pretium nibh ipsum consequat.
+Most relational database tables can be visualized as a sheet in Google Sheets or Microsoft Excel. 
+
+__RDBMS vs non-relational DBMS__
+- Example of RDBMS include PostgreSQL and MySQL
+- Example of non-relational DBMS include MongoDB
+
+*Note: A database is not the same thing as a Database Management System (DBMS)*
+
+__Databases constist of__
+
+- Tables 
+  - Tables contain rows
+    - Rows contain more or more columns
+- Store Procedures which are user created functions
+
+__SQL (pronounced "ess-que-el")__
+- Data Manipulation Lanuage (DML) - are are to change the data in the database
+  - Examples include
+
+___
+
+#### Guide Demo
+__Demo Link:__ <https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all>
+
+
+To view all records in a database
+`SELECT * FROM TableName`
+
+E.g. to view all employees in the Employee table
+`SELECT * FROM Employees`
+
+Get the specific colunns in a table
+`SELECT ColumnName1, ColumnName2 FROM TableName`
+
+Get the the first and last name of all employees
+` SELECT FirstName, LastName FROM Employees `
+
+Get the employees with the firstName Janet
+```
+SELECT * FROM Employees
+WHERE FirstName = "Janet"
+```
+
+Get the employees with the firstName Janet or firstName Adam
+```
+SELECT * FROM Employees
+WHERE FirstName = "Janet" 
+OR FirstName = "Adam"
+```
+
+Get the employees with the firstName Janet or firstName Adam
+```
+SELECT * FROM Employees
+WHERE FirstName = "Janet" 
+OR FirstName = "Adam"
+```
+
+Get the employees with the firstName's Janet, Adam, Michael and Anne
+```
+SELECT * FROM Employees
+WHERE FirstName in ('Janet', 'Adam', 'Michael', 'Anne')
+```
+
+Get the employees with the EmployeeID > 5
+```
+SELECT * FROM Employees
+WHERE EmployeeID > 5 
+```
+
