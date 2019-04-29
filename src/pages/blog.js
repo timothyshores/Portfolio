@@ -11,7 +11,7 @@ const Blog = () => {
                     node {
                         frontmatter {
                             title
-                            date(formatString: "MMMM Do, YYYY")
+                            date
                         },
                         fields {
                             slug
@@ -23,11 +23,16 @@ const Blog = () => {
     `)
 
     const { edges: blogPosts } = data.allMarkdownRemark
+    const filteredBlogPosts =
+        blogPosts.filter(
+            blogPost =>
+                blogPost.node.frontmatter.date <= new Date().toISOString().substring(0, 10)
+        )
 
     return (
         <Layout>
             <ol className={blogStyles.posts}>
-                {blogPosts.map(blogPost => {
+                {filteredBlogPosts.map(blogPost => {
                     const { title, date } = blogPost.node.frontmatter;
                     const { slug: url } = blogPost.node.fields;
 
@@ -40,7 +45,6 @@ const Blog = () => {
                         </li>
                     )
                 })}
-
             </ol>
         </Layout>
     )
