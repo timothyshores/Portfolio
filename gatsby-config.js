@@ -1,3 +1,6 @@
+let env = process.env.NODE_ENV || 'development';
+require('dotenv').config({ path: `./.env.${env}` });
+
 module.exports = {
     siteMetadata: {
         title: `Gatsby Bootcamp Tutorial`,
@@ -5,10 +8,10 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: `gatsby-source=contentful`,
+            resolve: `gatsby-source-contentful`,
             options: {
-                spaceId: `process.env.CONTENTFUL_SPACE_ID`,
-                accessToken: `process.env.CONTENTFUL_ACCESS_TOKEN`
+                spaceId: `${process.env.CONTENTFUL_SPACE_ID}`,
+                accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`
             }
         },
         `gatsby-plugin-sass`,
