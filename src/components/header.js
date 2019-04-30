@@ -12,7 +12,7 @@ const Header = (props) => {
             }
         }
     `)
-    console.log('Header props test', props);
+
     return (
         <div>
             <header className={headerStyles.header}>

@@ -3,10 +3,11 @@ require('dotenv').config({ path: `./.env.${env}` });
 
 module.exports = {
     siteMetadata: {
-        title: `Gatsby Bootcamp Tutorial`,
+        title: `Timothy Shores`,
         author: `Timothy Shores`
     },
     plugins: [
+        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-contentful`,
             options: {
