@@ -46,7 +46,7 @@ const Blog = () => {
                             </Link>
                         </li>
                     )
-                })}
+                }).reverse()}
             </ol>
         </Layout>
     )

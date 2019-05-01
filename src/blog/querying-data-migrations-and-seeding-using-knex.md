@@ -85,4 +85,6 @@ ___
 
 ![](https://media.giphy.com/media/nXxOjZrbnbRxS/giphy.gif)
 
+9. Run `npx knex seed:run` in terminal
+    
 ---
