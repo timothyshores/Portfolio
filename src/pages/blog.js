@@ -32,9 +32,6 @@ const Blog = () => {
                 blogPost.node.frontmatter.date <= (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().slice(0, 10)
         )
 
-    console.log('(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().slice(0, 10)\n', (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().slice(0, 10));
-    console.log('new Date().toISOString().substring(0, 10)', new Date().toISOString().substring(0, 10));
-
     return (
         <Layout>
             <Head title="Blog" />

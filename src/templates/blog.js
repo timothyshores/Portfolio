@@ -9,6 +9,9 @@ query($slug: String!) {
         frontmatter {
             title
             date(formatString: "MMMM Do, YYYY")
+            # attachments {
+            #     publicURL
+            # }
         }
         html
     }
