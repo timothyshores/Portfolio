@@ -59,7 +59,7 @@ date: "2019-05-02"
         }
     };
 ```
-3.  Run `npx knex migrate: make name_of_your_table`
+3.  Run `npx knex migrate:make name_of_your_table`
 4.  Modify new yyyymmmdd...js migrations file in /migrations
     - *Note: yyyymmdd is the current year, month and date*
     - *E.g. 20190501timestamp_tableName.js*
