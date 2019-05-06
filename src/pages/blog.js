@@ -23,20 +23,21 @@ const Blog = () => {
         }
     `);
 
-    const { edges: blogPosts } = data.allMarkdownRemark
-
+    const { edges: blogPosts } = data.allMarkdownRemark;
 
     const filteredBlogPosts =
         blogPosts.filter(
             blogPost =>
                 blogPost.node.frontmatter.date <= (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().slice(0, 10)
-        )
+        );
+
+    const sortedBlogPosts = filteredBlogPosts.sort((a, b) => (a.node.frontmatter.date < b.node.frontmatter.date) ? 1 : -1);
 
     return (
         <Layout>
             <Head title="Blog" />
             <ol className={blogStyles.posts}>
-                {filteredBlogPosts.map(blogPost => {
+                {sortedBlogPosts.map(blogPost => {
                     const { title, date } = blogPost.node.frontmatter;
                     const { slug: url } = blogPost.node.fields;
 
@@ -48,7 +49,7 @@ const Blog = () => {
                             </Link>
                         </li>
                     )
-                }).reverse()}
+                })}
             </ol>
         </Layout>
     )
