@@ -28,9 +28,9 @@ const Landing = (props) => {
             <div className={landingStyles.headerContent}>
                 <h1 className={landingStyles.h1}>Timothy Shores</h1>
                 <p className={landingStyles.p}>Full-Stack Web Developer and Software Engineer</p>
-                <a href="https://github.com/timothyshores" className={landingStyles.btn}>GitHub</a>
-                <a href="https://www.linkedin.com/in/timothyshores/" className={landingStyles.btn}>LinkedIn</a>
-                <a href="https://twitter.com/timothymshores" className={landingStyles.btn}>Twitter</a>
+                <a href="https://github.com/timothyshores" target="_blank" rel="noopener noreferrer" className={landingStyles.btn}>GitHub</a>
+                <a href="https://www.linkedin.com/in/timothyshores/" target="_blank" rel="noopener noreferrer" className={landingStyles.btn}>LinkedIn</a>
+                <a href="https://twitter.com/timothymshores" target="_blank" rel="noopener noreferrer" className={landingStyles.btn}>Twitter</a>
             </div>
         </header>
     )
