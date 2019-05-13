@@ -130,27 +130,64 @@ router.post('/login', (req, res) => {
 });
 ```
 
-9. Create `auth/middleware.js`
+9. Refactor `auth/middleware.js` to check for JWT rather than use brcyptjs to compare the user's unhashed password with the hashed password in the database
 
 ```
-const bcrypt = require('bcryptjs');
-const Users = require('../users/users-model.js');
+const jwt = require('jsonwebtoken');
+const secrets = require('../config/secrets');
 
 module.exports = (req, res, next) => {
-    const { username, password } = req.headers;
-    if (username && password) {
-        Users.findBy({ username })
-            .first()
-            .then(user => {
-                (user && bcrypt.compareSync(password, user.password)) 
-                    ? next()
-                    : res.status(401).json({ message: 'Invalid Credentials' });
-            })
-            .catch(error => {
-                res.status(500).json({ message: 'Ran into an unexpected error' });
-            });
-    } else {
-        res.status(400).json({ message: 'No credentials provided' });
-    }
+    const token = req.headers.authorization;
+
+    jwt.verify(token, secrets.jwtSecret, (err, decodedToken) => {
+        if (err) {
+            // token is invalid, expired or modified
+            res.status(401).json({ error: "Invalid token" })
+        } else {
+            // token is valid
+            req.decodedToken = decodedToken;
+            next();
+        }
+    });
 };
 ```
+
+10. Import `auth/middleware.js` into `users/users-router.js` and add middleware
+
+```
+const restricted = require('../auth/restricted-middleware.js');
+
+router.get('/', restricted, (req, res) => {
+    Users.find()
+        .then(users => {
+            res.json(users);
+        })
+        .catch(err => res.send(err));
+});
+```
+
+11. Create a `checkRole(role)` function in `users/users-router.js` that restricts the ability to view a list of users based on their role
+
+```
+function checkRole(role) {
+    return function (req, res, next) {
+        (req.decodedToken.roles && req.decodedToken.roles.includes(role))
+            ? next();
+            : res.status(403).json({ message: "Unable to access users" })
+    }
+}
+```
+
+12. Apply the checkRole middleware to our GET `/api/users` endpoint
+
+```
+router.get('/', restricted, checkRole('student'), (req, res) => {
+    Users.find()
+        .then(users => {
+            res.json(users);
+        })
+        .catch(err => res.send(err));
+});
+```
+
+**Final Repo: https://github.com/timothyshores/webauth-iii-guided**
