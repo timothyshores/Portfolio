@@ -129,3 +129,57 @@ _List Comprehension Solution_
 ```
 evens = [num for num in nums if n % 2 == 0]
 ```
+
+###Tuple
+
+- **Definition**: A tuple is an immutable list
+
+```
+a = ("foo", 1, "bar", 2);
+
+```
+
+###Functions
+
+- Parameters are the variable names in a function definition while arguements refers to the data being passed into the function
+  - In the example below x & y are parameters while 1 & 2 are the arguements
+- Function parameters are locally scoped
+
+```
+def sum(x, y)
+    return x + y
+
+print(sum(1, 2)) # returns 3
+print(x) # returns NameError: name 'x' is not defined
+```
+
+##Scope
+
+**Without global variable**
+
+```
+x = 10
+
+def foo(y)
+    x = 5
+    return x + y
+
+print(foo(2)) # returns 7
+print(a) # returns 10
+
+```
+
+**With Gloabl variable**
+
+```
+x = 10
+
+def foo(y)
+    global x
+    x = 5
+    return x + y
+
+print(foo(2)) # returns 7
+print(a) # returns 5
+
+```
