@@ -153,7 +153,7 @@ print(sum(1, 2)) # returns 3
 print(x) # returns NameError: name 'x' is not defined
 ```
 
-##Scope
+###Scope
 
 **Without global variable**
 
@@ -182,4 +182,110 @@ def foo(y)
 print(foo(2)) # returns 7
 print(a) # returns 5
 
+```
+
+```
+def foo(x):
+    total = 0
+
+    def bar(y):
+        total += y
+
+    return total
+
+print foo(2) # returns UnboundLocalError: local variable 'total' referenced before assignment
+```
+
+```
+def foo(x):
+    total = 0
+
+    def bar(y):
+        nonlocal total
+        total += y
+
+    return total
+
+print foo(20) # returns 190
+```
+
+###Named Arguements
+
+```
+def foo(x, y, x)
+    print(x, y, z)
+
+foo(z=1, y=2, x=3) # returns 3 2 1
+```
+
+**\*args**
+
+- \*args allows a function to take any number of inputs
+
+```
+def sum(count, *args)
+    print(count)
+    print(args)
+
+sum(1,2,3) # returns 3 on line 1 and then (1,2,3) on line 2
+```
+
+```
+def sum(count, *args)
+    a = 0
+
+    for i in args:
+        a += i
+
+    return a
+
+sum(1,2,3) # returns 6
+```
+
+```
+def sum(count, *args)
+    a = 0
+
+    for i in args:
+        a += i
+
+    return a
+
+sum(1,2,3) # returns 6
+```
+
+**\*\*kwargs**
+
+```
+def foo(**kwargs):
+    print(kwargs)
+
+print(x=10, y=20) # returns a dictionary {'x': 10, 'y', 20}
+```
+
+###Classes
+
+- Classes have inheritance, constructors, data storage and have methods
+
+```
+class Animal:
+    def __init__(self): # constructor
+        self.leg_count = 4
+
+    def get_leg_count(self):
+        return self.leg_Count
+
+    def set_leg_count(self, legs):
+        self.leg_Count = legs
+
+class Human(Animal):
+    def __init__(self): # constructor
+        self.leg_count = 2
+
+a = Animal() # creates a new instance from the animal class
+a.set_leg_count(2)
+print(a.get_leg_count()) # returns 2
+
+h = Human()
+print(h.get_leg_count()) # returns 2
 ```
