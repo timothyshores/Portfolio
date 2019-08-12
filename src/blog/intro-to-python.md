@@ -289,3 +289,99 @@ print(a.get_leg_count()) # returns 2
 h = Human()
 print(h.get_leg_count()) # returns 2
 ```
+
+####Exercise
+
+- User Story: Create a **store** with different **departments**.
+  - _Technical spec: the store object contains a number of department objects_
+
+**Requirements**
+
+- User Story: A store has a name
+  - _Technical Spec: The store object has a name attribute and that name atttribute is a string_
+- User Story: A user should be able to select a **department** and **_see all_** of the **products** in that department.
+  - _Technical Spec: The store object has a method that returns all departments_
+  - _Technical Spec: The department object has a method that returns all products in that department_
+- A user should be able to **_list all_** **departments** in a store and **_view_** each store name
+
+**Key Points**
+
+- **Nouns** tend to be classe
+- **_Verbs_** tend to be methods
+
+```
+class Store
+    def __init__(self, name, departments):
+        self.name = name;
+        self.departments = departments;
+
+    def __str__(self):
+        #Human readable string version of the object
+        store = self.name + ":"
+        for department_num in range(len(self.departments)):
+            store += f" {department_num + 1}: {self.departments[n]}"
+        return store
+
+    def __repr__(self):
+        #Python readable string version of the object
+        return f"Store({repr(self.name)}, {repr(self.departments)})"
+
+if __name__ == "__main__":
+    store1 = Store("Tim's store", ["Department 1", "Department 2"])
+
+    print(store1) # returns "Tim's store: Department 1, Department 2"
+    print(repr(store1)) # returns "Store("Tim's store", ['Department 1', 'Department 2'])
+
+    selection = input("Select department number: ")
+
+```
+
+####Has-a vs Is-a Relationships
+
+- Has-a
+  - Is compositional, an object composed of other objects
+  - E.g. stores are made up of departments
+- Is-a
+  - Belongs to, refers to the parent class
+
+####Abstract Classes (Related to Interfaces)
+
+**Definition**: Classes that do not define any functionality but they define functions that will be called
+
+**Example 1**: Polygon is an abstract class
+
+```
+class Polygon:
+    def get_num_sides():
+        pass
+
+class Square(Polygon):
+    def get_num_sides():
+        return 4
+
+class Triangle(Polygon):
+    def get_num_sides():
+        return 3
+```
+
+####Multiple Inheritance
+
+```
+class Sphere:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_radius(self):
+        return self.radius
+
+class Ball:
+    def bounce():
+        pass
+
+class Football(Ball): # single inheritance
+    pass
+
+class Basketball(Ball, Sphere): # multiple inheritance
+    # will inherit radius & get_radius() from Spehere and bounce() from Ball
+    pass
+```
