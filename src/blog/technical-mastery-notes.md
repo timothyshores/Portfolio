@@ -3,9 +3,6 @@ title: "Technical Mastery Notes"
 date: "2019-08-08"
 ---
 
-# Technical Mastery Notes
-
----
 
 ####Overview
 
@@ -42,6 +39,4 @@ If a array is sorted of distinct non-negative integers then the value at index i
 
 - E.g. A = [0,1,2,3,...,i] notice that index 0 is 0, index 1 is 1, ... etc.
 
-####Problame 2: Find rotation point
-
-Let
+**Rock, Paper, Scissors**

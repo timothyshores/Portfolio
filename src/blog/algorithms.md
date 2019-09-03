@@ -76,6 +76,8 @@ books = [
 
 ##Recursion
 
+Recursion is about finding identically defined subproblems
+
 **Example:** _Print the integers 10 to negative infinity_
 
 ```
@@ -196,3 +198,109 @@ def quicksort(list)
     left, pivot, right = partion(list)
     return quicksort(list) + [pivot] + quicksort(right)
 ```
+
+##Algorithms
+
+Big O Notation describes how algorithms scale as the amount of data increases
+
+####Factorial
+
+**_Examples_**
+_6! = 6 x 5 x 4 x 3 x 2 x 1 = 720_
+_5! = 5 x 4 x 3 x 2 x 1 = 120_
+_4! = 4 x 3 x 2 x 1 = 24_
+_3! = 3 x 2 x 1 = 6_
+_2! = 2 x 1 = 2_
+_1! = 1_
+_0! = 1_
+
+**_Recursive Solution_**
+
+```
+def recursive_factorial(num):
+    if num == 0:
+        return 1
+    else:
+        return num * recursive_factorial(num - 1)
+```
+
+**_Iterative Solution_**
+
+```
+def iterative_factorial(num):
+    product = 1  # acculator
+    for num in range(1, num + 1):
+        product *= num
+    return product
+```
+
+####Power / Exponents
+
+**_Example_**
+_2^0 = 1
+2^1 = 2
+2^2 = 2 x 2 = 4
+2^3 = 2 x 2 x 2 = 8
+2^4 = 2 x 2 x 2 x 2 = 16_
+
+```
+def iterative_exponents(base, exponent):
+    product = 1
+    for _ in range(exponent):
+        product *= base
+    return product
+```
+
+```
+def recursive_exponents(base, exponent):
+    if exponent == 0:
+        return 1
+    return base * recursive_exponents(base, exponent - 1)
+```
+
+#### Fibonacci
+
+What happens if I run into the problem where the instructions on my shampoo say to rinse and repeat and I realize that there's no base case?
+
+How would you go about solving rock, paper scissors?
+
+Idk if it's off topic but how do you find all unique permutation of for a given string using recursion. It's along the lines of the rock, paper, scissors problem.
+
+####Caching
+
+```
+def slow(x):
+    if x not in cache:
+        y = x
+        for i in range(100000000):
+            y *= 1.0000003
+            y *= 1.0000003
+    return cache[x]
+
+for i in range(5):
+    print(slow(i))
+```
+
+####Paint Bucket Tool Algorithm
+Algorithm to determine which pixels should be colored in Photoshop which will be reffered to as the flood fill algorithm
+
+####Anagrams
+
+Given a list of words
+
+```
+def is_anagram(string1, string2)
+    if len(string1) != len(string2):
+        return False
+
+    for letter in string1:
+
+
+```
+
+On line 29.5 
+```
+for word in fp:
+
+```
+
