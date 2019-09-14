@@ -5,7 +5,7 @@ date: "2019-09-03"
 
 ## Arrays
 
-Definition: A sequence of elements of the same type stored in a continuous block of memory 
+Definition: A sequence of elements of the same type stored in a continuous block of memory
 
 ```
 class DynamicArray
@@ -30,4 +30,4 @@ arr1 = DynamicArray(8)
 
 ```
 
-Python use dynamic arrays which Python refers to as a list. 
+Python use dynamic arrays which Python refers to as a list.
