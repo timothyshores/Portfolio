@@ -7,6 +7,11 @@ date: "2019-09-03"
 
 Definition: A sequence of elements of the same type stored in a continuous block of memory
 
+A dynamic array can increase it's size while a static array has a fixed size.
+
+Getting and setting items in a list is a constant time or O(1) operation
+Inserting is linear time or O(n) where n is the number of items that need to be shifted over. Appending to the end of an array that is not full is constant time or O(1).
+
 ```
 class DynamicArray
     def __init__(self, capacity = 8):

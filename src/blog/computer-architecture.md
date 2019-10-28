@@ -41,3 +41,13 @@ date: "2019-10-14"
 
 4 bits of data is a nibble
 8 bits of data is a byte
+
+
+##Logic Gates
+
+| A     | B     | A & B |
+| ----- | ----- | ----- |
+| False | False | False |
+| True  | False | False |
+| False | True  | False |
+| True  | True  | True  |
