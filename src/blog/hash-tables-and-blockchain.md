@@ -36,3 +36,5 @@ arr1 = DynamicArray(8)
 ```
 
 Python use dynamic arrays which Python refers to as a list.
+
+SHA-256 will result in a combination of 256 1s and 0s or 64 characters
