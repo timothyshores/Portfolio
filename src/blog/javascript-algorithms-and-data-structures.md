@@ -160,7 +160,7 @@ const charCount = str => {
   for (let char of str) {
     if (char.match(/^[a-z0-9]+$/i))
       counter.hasOwnProperty(char)
-        ? ++counter[char] = counter[char]
+        ? ++counter[char]
         : (counter[char.toLowerCase()] = 1);
   }
   return counter;
@@ -168,4 +168,21 @@ const charCount = str => {
 ```
 
 [![Edit red-moon-k9b94](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/red-moon-k9b94?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2Findex.js&moduleview=1&theme=dark)
+
+---
+
+#### Step 5: Look back and refactor
+
+- Can you check the result?
+- Can you derive the sult quickly?
+- Can you understand it at a quick glance?
+- Can you use the result for another problem?
+- Can you improve the performance of your solution?
+- Can you think of other ways to refactor?
+- How have others solved this same problem?
+
+***Example Problem***
+> [String.prototype.charCodeAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) is faster than Regular Expressions or RegEx. 
+ 
+This is an example follow up question to ask after presenting your solution in an interview setting.
 
