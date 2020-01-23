@@ -7,7 +7,7 @@ date: "2019-08-12"
 
 ---
 
-##Big O Notation
+## Big O Notation
 **Reference: bigocheatsheet.com**
 
 Measures how efficient a given piece of code is and answers questions such as how long does it take to sort a list? This is also reffered to as the number of operations or number of comparisons.
@@ -34,7 +34,7 @@ Measures how efficient a given piece of code is and answers questions such as ho
 
 * **Exponential time is O(2^n)** meaning that the time it takes doubles for every additional element that is added to a list &nbsp; &nbsp;
 
-####Rules for determing Big O
+#### Rules for determing Big O
 
 1. Things in sequence: add big Os
 2. Drop constant factors
@@ -100,6 +100,23 @@ def foo(n):
 foo(10)
 ```
 
+**Example:** _Find the factorial of n_
+
+```
+def factorial(n):
+    if n == 1: # base case
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+foo(1) // returns 1
+foo(2) // returns 2 which is the product of 2 * 1
+foo(3) // returns 6  which is the product of 3 * 2 * 1
+foo(4) // returns 24  which is the product of 4* 3 * 2 * 1
+foo(5) // returns 120  which is the product of 5 * 4 * 3 * 2 * 1
+```
+
 **Example:** _Fibonacci sequence is the sum of the previous two numbers_
 
 ```
@@ -139,8 +156,19 @@ def explore(node:)
     explore(node.left)
     explore(node.right)
 ```
+### Selection Sort
 
-###Quicksort
+**Steps**
+
+1. Iterate through every element in the data structure
+2. Find the largest or smallest element in the data structure
+3. Add the largest or smallest element to a new data structure
+4. Remove the largest or smallest element from the old data structure
+5. Repeat steps 1 to 4 until the old data structure is empty
+6. Return the new data structure
+
+
+### Quicksort
 
 **Steps**
 
