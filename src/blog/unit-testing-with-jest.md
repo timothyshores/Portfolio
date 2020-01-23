@@ -17,11 +17,11 @@ date: "2019-05-13"
 **Initial Repo: https://github.com/LambdaSchool/webtesting-i-guided**
 
 1. Install jest via yarn
-```
+```javascript
 yarn add --dev jest
 ```
 2. Update scipts in `package.json` to use jest
-```
+```javascript
 "scripts": {
         "test": "jest --watch"
     },
@@ -29,7 +29,7 @@ yarn add --dev jest
 3. Run `yarn test` in terminal 
 4. Write our first test in `calculator.spec.js`
    
-```
+```javascript
 it('runs the test', () => {
     //arrage - setup
     const expected = true;
@@ -58,12 +58,12 @@ Watch Usage: Press w to show more.
 
 ```
 
-5. Rename `calculator.spec.js` to `calculator.test.js`
+1. Rename `calculator.spec.js` to `calculator.test.js`
    - *Jest will test all files that include `.spec` or `.test` in the filename and any files in a folder named `__tests__`*
 
-6. Write a test that describes that add method in `calculator.test.js`
+2. Write a test that describes that add method in `calculator.test.js`
 
-```
+```javascript
 const { add } = require('./calculator.js');
 
 describe('calculator.js', () => {
@@ -80,9 +80,9 @@ describe('calculator.js', () => {
 
 7. Update the add() function in `calculator.js`
 
-```
+```javascript
 module.exports = {
-    add,
+    add
 };
 
 function add(num1,  num2) {
@@ -93,7 +93,7 @@ function add(num1,  num2) {
 
 8. Write a test in `calculator.spec.js` to check if the function can recieve multiple arguements
    
-```
+```javascript
 it('returns the sum of multiple values', () => {
             expect(add(1, 2, 3)).toBe(6);
             expect(add(1, 2, 3, 4)).toBe(10);
@@ -102,7 +102,7 @@ it('returns the sum of multiple values', () => {
 ```
 9. Update add() function in `calculator.js`
 
-```
+```javascript
 function add(...args) {
     return args.reduce((previous, current) =>
         previous + current, 0
@@ -112,7 +112,7 @@ function add(...args) {
 
 10. Write a test in `calculator.spec.js` to check if the function can recieve an array as an input
 
-```
+```javascript
 it('returns the sum of an array', () => {
     expect(add([1, 2])).toBe(3);
     expect(add([1, 2, 3])).toBe(6);
@@ -122,7 +122,7 @@ it('returns the sum of an array', () => {
 
 11. Update add() function in `calculator.js`
 
-```
+```javascript
 function add(args) {
     const array = Array.isArray(args) ? args : [...arguments];
 

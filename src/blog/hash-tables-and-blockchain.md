@@ -12,7 +12,7 @@ A dynamic array can increase it's size while a static array has a fixed size.
 Getting and setting items in a list is a constant time or O(1) operation
 Inserting is linear time or O(n) where n is the number of items that need to be shifted over. Appending to the end of an array that is not full is constant time or O(1).
 
-```
+```python
 class DynamicArray
     def __init__(self, capacity = 8):
         self.count = 0

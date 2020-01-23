@@ -12,21 +12,21 @@ ___
 __Demo Link:__ https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
 
 Add a row entry into a table
-```
+```sql
 INSERT INTO customers 
 (customerName, contactName, address, city, postalCode, country)
 values ('Awesome Devs', 'Will Conn', '1 Awesome Devs Drive', 'Provo', '12345', 'USA')
 ```
 
 Update an entire column in a table
-```
+```sql
 select * from customers
 update customers set country = 'United States of America'
 where country like 'Uni%'
 ```
 
 Delete a specific row entry
-```
+```sql
 select * from customers
 delete from customers
 where customerId = 92
@@ -55,13 +55,13 @@ ___
 3. Install knex in 
    - Run `yarn add knex sqlite3` in the root directory in terminal
    - Import knex into roles/roles-router.js
-```
+```javascript
 const knex = require('knex');
 ```
 
 4. Configure knex to modify our database in roles/roles-router.js
 
-```
+```javascript
 const knexConfig = {
     client: 'sqlite3',
     connection: {
@@ -75,7 +75,7 @@ const db = knex(knexConfig);
 
 5. List all existing roles in roles/roles-router.js
 
-```
+```javascript
 router.get('/', (req, res) => {
     db('roles')
         .then(roles => res.status(200).json(roles))
@@ -85,7 +85,7 @@ router.get('/', (req, res) => {
 
 6. Create a new role in roles/roles-router.js
     
-```
+```javascript
 router.post('/', (req, res) => {
     db('roles')
         .insert(req.body, 'id')
@@ -96,7 +96,7 @@ router.post('/', (req, res) => {
 
 7. List a role by ID in roles/roles-router.js
    
-```
+```javascript
 router.get('/:id', (req, res) => {
     db('roles')
         .where({ id: req.params.id })
@@ -106,7 +106,7 @@ router.get('/:id', (req, res) => {
 ```
 
 We can refactor the code above to include 404 and ternary operator
-```
+```javascript
 router.get('/:id', (req, res) => {
     const message404 = { message: 'Role not found' }
 
@@ -124,7 +124,7 @@ router.get('/:id', (req, res) => {
 
 8. Update a role in roles/roles-router.js
 
-```
+```javascript
 router.put('/:id', (req, res) => {
   db('roles')
     .where({ id: req.params.id })
@@ -147,7 +147,7 @@ router.put('/:id', (req, res) => {
 
 9.  Delete a role in roles/roles-router.js
 
-```
+```javascript
 router.delete('/:id', (req, res) => {
   db('roles')
     .where({ id: req.params.id })

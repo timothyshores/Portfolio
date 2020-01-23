@@ -15,7 +15,7 @@ date: "2019-05-06"
 
 ***We are given the following POST request endpoint to /api/register***
 
-```
+```javascript
 server.post('/api/register', (req, res) => {
   let user = req.body;
 
@@ -33,7 +33,7 @@ server.post('/api/register', (req, res) => {
 
 3. Use **bcryptjs** to hash the password passed in via `req.body`
 
-```
+```javascript
 server.post('/api/register', (req, res) => {
     let user = req.body;
 
@@ -54,7 +54,7 @@ server.post('/api/register', (req, res) => {
 
 ***We are given the following POST request endpoint to /api/login***
 
-```
+```javascript
 server.post('/api/login', (req, res) => {
   let { username, password } = req.body;
 
@@ -77,7 +77,7 @@ server.post('/api/login', (req, res) => {
 
 4. Use **bcryptjs** to check if the unhashed password passed in by the user via `req.body` is equal to the hashed password of the user in the User's table
 
-```
+```javascript
 server.post('/api/login', (req, res) => {
     let { username, password } = req.body;
 
@@ -100,7 +100,7 @@ server.post('/api/login', (req, res) => {
 
 ***We are given the following GET request endpoint to /api/users***
 
-```
+```javascript
 server.get('/api/users', (req, res) => {
   Users.find()
     .then(users => {
@@ -118,7 +118,7 @@ server.get('/api/users', (req, res) => {
 
 Add a middleware function called protected to the get request endpoint in `index.js`
 
-```
+```javascript
 server.get('/api/users', protected, (req, res) => {
     Users.find()
         .then(users => {
@@ -130,7 +130,7 @@ server.get('/api/users', protected, (req, res) => {
 
 Create a new folder and a new file called `auth/protected.js` with the following 
 
-```
+```javascript
 const bcrypt = require('bcryptjs');
 const Users = require('../users/users-model.js');
 

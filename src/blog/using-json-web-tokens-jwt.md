@@ -16,13 +16,13 @@ date: "2019-05-08"
    - Run `yarn add connect-session-knex` in terminal
 2.  Use a higher order component (HOC) to import connect-session-knex and pass in session into `server.js` 
 
-```
+```javascript
 const KnexSessionStore = require('connect-session-knex')(session);
 ```
 
 3. Update sessionConfig object to include a key of store with the keys knex, createtable, clearInterval
 
-```
+```javascript
 const sessionConfig = {
     // default value is session id
     name: 'name of the cookie', 
@@ -70,26 +70,26 @@ Differences: Cookies are held by the server while tokens are held by the client
 1.  Install `dotenv` by running `yarn add dotenv`
 2.  Import `dotenv` into `index.js`
 
-```
+```javascript
 require("dotenv").config();
 ```
 3.  Create a .env file in the root directory of the project
 4.  Create a variable called `JWT_SECRET` and set it equal to 
 
-```
+```javascript
 JWT_SECRET=this is the secret key
 ```
 
 5. Install `jsonwebtoken` by running `yarn add jsonwebtoken` in terminal
 6. Import `jsonwebtoken` into `auth/auth-router.js` 
 
-```
+```javascript
 const jwt = require('jsonwebtoken');
 ```
 
 7. Create a function called generateToken and pass in a user in `auth/auth-router.js`
 
-```
+```javascript
 function generateToken(user) {
     const payload = {
         subject: user.id,
@@ -107,7 +107,7 @@ function generateToken(user) {
     
 *Note: We are using bcryptjs to match the unhashed password that the user enters to the hashed password stored in S* 
 
-```
+```javascript
 router.post('/login', (req, res) => {
     let { username, password } = req.body;
 
@@ -132,7 +132,7 @@ router.post('/login', (req, res) => {
 
 9. Refactor `auth/middleware.js` to check for JWT rather than use brcyptjs to compare the user's unhashed password with the hashed password in the database
 
-```
+```javascript
 const jwt = require('jsonwebtoken');
 const secrets = require('../config/secrets');
 
@@ -154,7 +154,7 @@ module.exports = (req, res, next) => {
 
 10. Import `auth/middleware.js` into `users/users-router.js` and add middleware
 
-```
+```javascript
 const restricted = require('../auth/restricted-middleware.js');
 
 router.get('/', restricted, (req, res) => {
@@ -168,7 +168,7 @@ router.get('/', restricted, (req, res) => {
 
 11. Create a `checkRole(role)` function in `users/users-router.js` that restricts the ability to view a list of users based on their role
 
-```
+```javascript
 function checkRole(role) {
     return function (req, res, next) {
         (req.decodedToken.roles && req.decodedToken.roles.includes(role))
@@ -180,7 +180,7 @@ function checkRole(role) {
 
 12. Apply the checkRole middleware to our GET `/api/users` endpoint
 
-```
+```javascript
 router.get('/', restricted, checkRole('student'), (req, res) => {
     Users.find()
         .then(users => {

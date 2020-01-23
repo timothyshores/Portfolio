@@ -4,7 +4,7 @@ date: "2019-05-14"
 ---
 
 
-####Test the functionality of a component rather than the implementation
+#### Test the functionality of a component rather than the implementation
 
 *If you wrote tests for all class based components then the team wants to refactor the app to use functional components using hooks. All implementation based tests will fail but the implementation based tests will pass.*
 
@@ -15,7 +15,7 @@ date: "2019-05-14"
    - *Documentation: https://testing-library.com/docs/react-testing-library/intro*
 3. Write our first test in `app.test.js`
 
-    ```
+    ```javascript
     import React from 'react';
     import ReactDOM from 'react-dom';
     import { render } from 'react-testing-library';
@@ -36,13 +36,13 @@ date: "2019-05-14"
 
 4. Import cleanup from react-testing-library in `app.test.js`
 
-    ```
+    ```javascript
     import { cleanup, render } from 'react-testing-library';
     ```
 
 5. Include `afterEach(cleanup);` in `app.test.js`
 
-    ```
+    ```javascript
     import React from 'react';
     import { cleanup, render } from 'react-testing-library';
     import App from './App';
@@ -51,7 +51,7 @@ date: "2019-05-14"
 
 6. Write a test to check that <App /> renders Hello World! (case insensitive) in app.test.js
 
-    ```
+    ```javascript
     describe('<App />', () => {
         it('renders Hello World', () => {
             const { getByText } = render(<App />);
@@ -62,7 +62,7 @@ date: "2019-05-14"
 
 7. Update `App.js` to render Hello World!
 
-    ```
+    ```javascript
     import React, { Component } from 'react';
     import './App.css';
 
@@ -81,7 +81,7 @@ date: "2019-05-14"
 
 8. Write a test to check if Hello Web 18 renders after clicking a button with the text greet in `app.test.js`
 
-```
+```javascript
     it('greets the web 18 cohort', () => {
         const { getByText } = render(<App />);
         const button = getByText(/greet/i);
@@ -92,7 +92,7 @@ date: "2019-05-14"
 
 9. Add the UI and functionality in `app.js` for the previous test using react hooks
 
-    ```
+    ```javascript
     import React, { useState } from 'react';
     import './App.css';
 
@@ -119,7 +119,7 @@ date: "2019-05-14"
 
 10. Create a Players.js component in `/src` directory
 
-    ```
+    ```javascript
     import React from 'react';
 
     function Players(props) {
@@ -140,7 +140,7 @@ date: "2019-05-14"
 
 ---
 
-###Resources
+### Resources
 
 **React Testing Library:** https://testing-library.com/docs/react-testing-library/intro
 

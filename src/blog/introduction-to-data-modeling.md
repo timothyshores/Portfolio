@@ -6,13 +6,13 @@ date: "2019-05-02"
 ---
 
 ---
-###Definitions
+### Definitions
 - ***Constraints*** - A constraint can be thought of as a unique primary key but for multple columns
 - ***Data Normalization*** - Requires a primary key in every table
 
 ---
 
-##Relationships
+## Relationships
 
 - ###One to one 
   - *Example: a government database where every person has a social security number*
@@ -39,10 +39,10 @@ date: "2019-05-02"
 
 ---
 
-###Guided Demo
+### Guided Demo
 1. Run `npx knex init` to create a knexfile.js
 2. Modify knexfile.js
-```
+```javascript
     module.exports = {
         development: {
             client: 'sqlite3',
@@ -64,7 +64,7 @@ date: "2019-05-02"
     - *Note: yyyymmdd is the current year, month and date*
     - *E.g. 20190501timestamp_tableName.js*
   
-```
+```javascript
 exports.up = function (knex, Promise) {
     // the tables most be created in the right order,
     // tables with FK are created after the referenced table is created

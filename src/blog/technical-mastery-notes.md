@@ -4,11 +4,11 @@ date: "2019-08-08"
 ---
 
 
-####Overview
+#### Overview
 
 Technical mastery is a lecture series at Lambda School that teaches whiteboarding skills.
 
-####Sets
+#### Sets
 
 **Definition**: Sets are data structures that allow you to store unqiue values of any type.
 
@@ -16,9 +16,9 @@ Sets are similiar to objects but rather than containing key value pairs, sets on
 
 ---
 
-###Problem Set
+### Problem Set
 
-####Problame 1: Find the Smallest Missing Element from a Sorted Array
+#### Problem 1: Find the Smallest Missing Element from a Sorted Array
 
 Given a sorted array of distinct non-negative integers, find the smallest missing element in it.
 
@@ -39,4 +39,3 @@ If a array is sorted of distinct non-negative integers then the value at index i
 
 - E.g. A = [0,1,2,3,...,i] notice that index 0 is 0, index 1 is 1, ... etc.
 
-**Rock, Paper, Scissors**

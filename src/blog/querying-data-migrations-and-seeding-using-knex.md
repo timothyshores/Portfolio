@@ -11,15 +11,15 @@ __Demo Link:__ https://www.w3schools.com/Sql/tryit.asp?filename=trysql_select_to
 
 __Task__: Display a table with all orders and customers on a single table
 
-``
+```sql
 SELECT * 
 FROM Customers
 INNER JOIN Orders on Customers.customerID = Orders.customerID
-``
+```
 
 __Task__: Display a table with all orders, customers and employees on a single table
 
-```
+```sql
 SELECT *
 FROM Orders
 INNER JOIN Customers on Customers.customerID = Orders.customerID
@@ -27,7 +27,7 @@ INNER JOIN Employees on Employees.employeeId = Orders.employeeID
 ```
 
 ---
-##Create Database Using Javascript
+## Create Database Using Javascript
 
 ***Motivation:*** By creating a database using Javascript it alows a developer to get any previous version of the database. Migrations are like version control system such as Git or Redux but for your database. A developer can recreate the exact database at any point in time.
 
@@ -35,13 +35,12 @@ __Demo Link:__ https://github.com/LambdaSchool/webdb-iii-guided
 
 *To view all knex functions run `npx knex` in terminal*
 
-
 1. Initialize a database: `npx knex init`
   - This will generate a knexfile.js in the root directory of your project repo
 2. Modify the knexfile.js
      - *We do not need the staging or production environments for this demo*
   
-```
+```javascript
 module.exports = {
   development: {
     client: 'sqlite3',
@@ -58,7 +57,7 @@ module.exports = {
 5. Modify migrations/20190501122556_create_roles_table.js 
 
 ___
-```
+```javascript
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('roles', tbl => {
         tbl.increments(); 

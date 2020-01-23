@@ -47,7 +47,7 @@ Measures how efficient a given piece of code is and answers questions such as ho
 
 ###Insertion Sort
 
-```
+```python
 class Book:
     def __init__(self, title, name, genre):
         self.title = title
@@ -80,7 +80,7 @@ Recursion is about finding identically defined subproblems
 
 **Example:** _Print the integers 10 to negative infinity_
 
-```
+```python
 def foo(n):
     print(n)
     foo(n-1)
@@ -90,7 +90,7 @@ foo(10)
 
 **Example:** _Print the integers 10 to 1_
 
-```
+```python
 def foo(n):
     if n== 0: # base case
         return
@@ -102,7 +102,7 @@ foo(10)
 
 **Example:** _Find the factorial of n_
 
-```
+```python
 def factorial(n):
     if n == 1: # base case
         return 1
@@ -119,7 +119,7 @@ foo(5) // returns 120  which is the product of 5 * 4 * 3 * 2 * 1
 
 **Example:** _Fibonacci sequence is the sum of the previous two numbers_
 
-```
+```python
 def fib(n):
     if n == 0:
         return 0
@@ -147,7 +147,7 @@ print(fib(7)) # 13
 
 _Pseudocode_
 
-```
+```python
 def explore(node:)
     if node == None
         return
@@ -185,7 +185,7 @@ def explore(node:)
 
 **Implementation**
 
-```
+```python
 def partion(list):
     left= []
     pivot = list[0]
@@ -207,7 +207,7 @@ def quicksort(list)
 
 **Refactor:** implement quick sort in place or without creating a new list
 
-```
+```python
 def partion(list):
     left= []
     pivot = list[0]
@@ -244,7 +244,7 @@ _0! = 1_
 
 **_Recursive Solution_**
 
-```
+```python
 def recursive_factorial(num):
     if num == 0:
         return 1
@@ -254,7 +254,7 @@ def recursive_factorial(num):
 
 **_Iterative Solution_**
 
-```
+```python
 def iterative_factorial(num):
     product = 1  # acculator
     for num in range(1, num + 1):
@@ -271,7 +271,7 @@ _2^0 = 1
 2^3 = 2 x 2 x 2 = 8
 2^4 = 2 x 2 x 2 x 2 = 16_
 
-```
+```python
 def iterative_exponents(base, exponent):
     product = 1
     for _ in range(exponent):
@@ -279,7 +279,7 @@ def iterative_exponents(base, exponent):
     return product
 ```
 
-```
+```python
 def recursive_exponents(base, exponent):
     if exponent == 0:
         return 1
@@ -294,9 +294,9 @@ How would you go about solving rock, paper scissors?
 
 Idk if it's off topic but how do you find all unique permutation of for a given string using recursion. It's along the lines of the rock, paper, scissors problem.
 
-####Caching
+#### Caching
 
-```
+```python
 def slow(x):
     if x not in cache:
         y = x
@@ -311,24 +311,4 @@ for i in range(5):
 
 ####Paint Bucket Tool Algorithm
 Algorithm to determine which pixels should be colored in Photoshop which will be reffered to as the flood fill algorithm
-
-####Anagrams
-
-Given a list of words
-
-```
-def is_anagram(string1, string2)
-    if len(string1) != len(string2):
-        return False
-
-    for letter in string1:
-
-
-```
-
-On line 29.5 
-```
-for word in fp:
-
-```
 

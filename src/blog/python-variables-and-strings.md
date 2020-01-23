@@ -3,17 +3,17 @@ title: "Python Variables, Dynamic Typing and Strings"
 date: "2019-07-18"
 ---
 
-#Python Variables and Strings
+# Python Variables and Strings
 
 ---
 
-####Naming Restrictions
+#### Naming Restrictions
 
 1. Letters must start with a letter or an underscore
 2. The rest of the variable name must consist of letters, numbers or underscores
    - E.g. no symbols are allowed including !@#\$%^&\*()? etc.
 
-####Naming Conventions
+#### Naming Conventions
 
 1. Variable names are snake_case
    - _Snake case means that lowercase letters with an undscore between the words_
@@ -23,7 +23,7 @@ date: "2019-07-18"
    - _An example of this might be a Users class_
 4. Private variables are **double_underscore** variables and should not be modified
 
-###Data Types
+### Data Types
 
 - **Booleans**
   - Either True or False
@@ -38,12 +38,12 @@ date: "2019-07-18"
 
 _There are a lot more data types in Python_
 
-###Dynamic Typing
+### Dynamic Typing
 
 Dynamic typing means that a variable can be reassigned to a different data type.
 
-###None
+### None
 
 None is a special case in Python similiar to True or False. It's the Python equivalent of null in Javascript.
 
-###
+

@@ -25,7 +25,7 @@ date: "2019-05-07"
 `const session = require('express-session')`
 3. Create a new sessionConfig variable and configure middleware to use session and sessionConfig in `server.js`
 
-```
+```javascript
 const sessionConfig = {
     name: '', // default value is session id
     secret: 'keep it secret, keep it safe - gandalf', // only our server knows this value for production store this in .env file
@@ -43,7 +43,7 @@ server.use(session(sessionConfig));
 
 4. Create a cookie in the POST request endpoint to /api/auth/login in `auth/auth-router.js` 
 
-```
+```javascript
 router.post('/login', (req, res) => {
     let { username, password } = req.body;
 
@@ -67,7 +67,7 @@ router.post('/login', (req, res) => {
 
 5. Send a POST request to `localhost:5000/api/auth/register` in Insomnia
 
-```
+```javascript
 {
 	"username": "admin",
 	"password": "admin"
@@ -76,7 +76,7 @@ router.post('/login', (req, res) => {
 
 This will return the id, username and hashed password
 
-```
+```javascript
 {
   "id": 1,
   "username": "admin",
@@ -86,7 +86,7 @@ This will return the id, username and hashed password
 
 6. Refactor `auth/restricted-middleware.js` to check for cookies
 
-```
+```javascript
 module.exports = (req, res, next) => {
     if (req.session && req.session.username) {
         next();
@@ -99,7 +99,7 @@ module.exports = (req, res, next) => {
 
 7. Create a GET request endpoint to `localhost:5000/api/auth/logout`
 
-```
+```javascript
 router.get('/logout', (req, res) => {
     if (req.session) {
         req.session.destroy(err => {

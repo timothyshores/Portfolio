@@ -26,7 +26,7 @@ date: "2019-11-4"
 
 **_Example_**: A directed graph with two nodes. You can traverse from A to B but can not traverse from B to A.
 
-```
+```python
 class Graph:
     def __init__(self):
         self.vertices = {
@@ -37,7 +37,7 @@ class Graph:
 
 **_Example_**: An undirected graph with two nodes. You can traverse from nodes A to B and also from nodes B to A.
 
-```
+```python
 class Graph:
     def __init__(self):
         self.vertices = {

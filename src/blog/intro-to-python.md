@@ -11,7 +11,7 @@ date: "2019-08-05"
 
 **Python**
 
-```
+```python
 help([]) # returns documentation for lists
 help({}) # returns documentation for dictionaries
 help("") # returns documentation for strings
@@ -31,7 +31,7 @@ help("") # returns documentation for strings
 
 **Javascript**
 
-```
+```javascript
 if (2 > 1) {
     console.log('Two is greater than one)
 }
@@ -39,7 +39,7 @@ if (2 > 1) {
 
 **Python**
 
-```
+```python
 if 2 > 1:
     print('Two is greater than one)
 ```
@@ -48,7 +48,7 @@ if 2 > 1:
 
 **Javascript**
 
-```
+```javascript
 const nums = [1,2,3]
 console.log(nums[0]); // returns 1
 console.log(numers.length); // returns 3
@@ -56,7 +56,7 @@ console.log(numers.length); // returns 3
 
 **Python**
 
-```
+```python
 nums = [1,2,3]
 print(nums[0]) # returns 1
 print(nums[0:2]) # returns [1,2]
@@ -67,7 +67,7 @@ print(len(nums)) # returns 3
 
 **Javascript**
 
-```
+```javascript
 for (let i = 0; i < 10; i++)
 {
     console.log(i);
@@ -76,16 +76,16 @@ for (let i = 0; i < 10; i++)
 
 **Python**
 
-```
+```python
 for num in range(10):
     print(num)
 ```
 
-###Objects / Dictionary
+### Objects / Dictionary
 
 **Javascript**
 
-```
+```javascript
 const e = {
     "foo": 12,
     "bar": [1,2,3]
@@ -95,7 +95,7 @@ console.log(e.foo); // returns 12
 
 **Python**
 
-```
+```python
 const e = {
     "foo": 12,
     "bar": [1,2,3]
@@ -105,20 +105,20 @@ for i in e:
     print(i) # returns foo on line 1 and then bar on line 2
 ```
 
-###List Comprehensions
+### List Comprehensions
 
 **Python**
 
 _Challenge: Find the even numbers in `nums` and store the result in `events`_
 
-```
+```python
 nums = [1, 5, 8, 12, 4, 7, 6, 2]
 evens = []
 ```
 
 _For Loop Solution_
 
-```
+```python
 for num in nums:
     if num % 2 == 0: # if num is even
         evens.append(n)
@@ -126,26 +126,26 @@ for num in nums:
 
 _List Comprehension Solution_
 
-```
+```python
 evens = [num for num in nums if n % 2 == 0]
 ```
 
-###Tuple
+### Tuple
 
 - **Definition**: A tuple is an immutable list
 
-```
+```python
 a = ("foo", 1, "bar", 2);
 
 ```
 
-###Functions
+### Functions
 
 - Parameters are the variable names in a function definition while arguements refers to the data being passed into the function
   - In the example below x & y are parameters while 1 & 2 are the arguements
 - Function parameters are locally scoped
 
-```
+```python
 def sum(x, y)
     return x + y
 
@@ -157,7 +157,7 @@ print(x) # returns NameError: name 'x' is not defined
 
 **Without global variable**
 
-```
+```python
 x = 10
 
 def foo(y)
@@ -171,7 +171,7 @@ print(a) # returns 10
 
 **With Gloabl variable**
 
-```
+```python
 x = 10
 
 def foo(y)
@@ -184,7 +184,7 @@ print(a) # returns 5
 
 ```
 
-```
+```python
 def foo(x):
     total = 0
 
@@ -196,7 +196,7 @@ def foo(x):
 print foo(2) # returns UnboundLocalError: local variable 'total' referenced before assignment
 ```
 
-```
+```python
 def foo(x):
     total = 0
 
@@ -209,9 +209,9 @@ def foo(x):
 print foo(20) # returns 190
 ```
 
-###Named Arguements
+### Named Arguements
 
-```
+```python
 def foo(x, y, x)
     print(x, y, z)
 
@@ -222,7 +222,7 @@ foo(z=1, y=2, x=3) # returns 3 2 1
 
 - \*args allows a function to take any number of inputs
 
-```
+```python
 def sum(count, *args)
     print(count)
     print(args)
@@ -230,7 +230,7 @@ def sum(count, *args)
 sum(1,2,3) # returns 3 on line 1 and then (1,2,3) on line 2
 ```
 
-```
+```python
 def sum(count, *args)
     a = 0
 
@@ -242,7 +242,7 @@ def sum(count, *args)
 sum(1,2,3) # returns 6
 ```
 
-```
+```python
 def sum(count, *args)
     a = 0
 
@@ -256,18 +256,18 @@ sum(1,2,3) # returns 6
 
 **\*\*kwargs**
 
-```
+```python
 def foo(**kwargs):
     print(kwargs)
 
 print(x=10, y=20) # returns a dictionary {'x': 10, 'y', 20}
 ```
 
-###Classes
+### Classes
 
 - Classes have inheritance, constructors, data storage and have methods
 
-```
+```python
 class Animal:
     def __init__(self): # constructor
         self.leg_count = 4
@@ -290,7 +290,7 @@ h = Human()
 print(h.get_leg_count()) # returns 2
 ```
 
-####Exercise
+#### Exercise
 
 - User Story: Create a **store** with different **departments**.
   - _Technical spec: the store object contains a number of department objects_
@@ -309,7 +309,7 @@ print(h.get_leg_count()) # returns 2
 - **Nouns** tend to be classe
 - **_Verbs_** tend to be methods
 
-```
+```python
 class Store
     def __init__(self, name, departments):
         self.name = name;
@@ -336,7 +336,7 @@ if __name__ == "__main__":
 
 ```
 
-####Has-a vs Is-a Relationships
+#### Has-a vs Is-a Relationships
 
 - Has-a
   - Is compositional, an object composed of other objects
@@ -344,13 +344,13 @@ if __name__ == "__main__":
 - Is-a
   - Belongs to, refers to the parent class
 
-####Abstract Classes (Related to Interfaces)
+#### Abstract Classes (Related to Interfaces)
 
 **Definition**: Classes that do not define any functionality but they define functions that will be called
 
 **Example 1**: Polygon is an abstract class
 
-```
+```python
 class Polygon:
     def get_num_sides():
         pass
@@ -364,9 +364,9 @@ class Triangle(Polygon):
         return 3
 ```
 
-####Multiple Inheritance
+#### Multiple Inheritance
 
-```
+```python
 class Sphere:
     def __init__(self, radius):
         self.radius = radius

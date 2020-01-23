@@ -42,7 +42,7 @@ Downsides: Reading data worst case scenario takes O(n) linear time to traverse t
 - Have to start at the head
 - O(n) to traverse through
 
-```
+```python
 class ListNode:
     def __init__(self, value, prev=None, next=None):
         self.value = value

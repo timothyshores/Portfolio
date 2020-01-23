@@ -10,16 +10,16 @@ date: "2019-05-16"
 1. Install supertest as a dev dependency by running `yarn add supertest --dev`
 2. Update `package.json` and add new jest key 
 
-    ```
+    ```javascript
     "jest": {
         "devEnvironment": "node"
     }
-```
+    ```
 
 3. Generate `jest.config.js` by running `npx jest --init` with the following options
 4. Overwrite `jest.config.js`
 
-    ```
+    ```javascript
     const includeCoverage = process.env.DB_ENV === 'testing';
 
     module.exports = {
