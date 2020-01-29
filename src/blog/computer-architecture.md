@@ -3,11 +3,7 @@ title: "Computer Architecture"
 date: "2019-10-14"
 ---
 
-#JS Camp 2019
-
----
-
-##Basics, Number Bases
+## Basics, Number Bases
 
 **Binary**
 
@@ -43,7 +39,7 @@ date: "2019-10-14"
 8 bits of data is a byte
 
 
-##Logic Gates
+## Logic Gates
 
 | A     | B     | A & B |
 | ----- | ----- | ----- |
