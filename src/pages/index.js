@@ -24,6 +24,7 @@ const Index = () => {
           description="Full-Stack application using Node.js, Express.js, React, Firebase,
           Stripe, Axios, Semantic UI and more."
           github="https://github.com/labs13-recruiter-rule"
+          demo="https://recruiterrules.com/"
         />
         <Card
           name="Tweetmate"
@@ -32,6 +33,7 @@ const Index = () => {
           credit="Robin Worrall"
           description="Back End RESTful API using Node.js and Express.js"
           github="https://github.com/pat-pyschographic-analysis-of-text/Backend"
+          demo="https://tweetmate.netlify.com/"
         />
         <Card
           name="Weight Lifting Journal"
@@ -42,6 +44,7 @@ const Index = () => {
           including exercises, sets, reps and weight that is stored in a Node.js
           back end API"
           github="https://github.com/weightlifting-journal-build-week/front-end"
+          demo="https://weight-lifting-journal.netlify.com/"
         />
       </Layout>
     </>

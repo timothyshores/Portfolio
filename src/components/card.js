@@ -1,6 +1,6 @@
 import React from "react"
 
-const Card = ({ name, image, handle, credit, description, github }) => {
+const Card = ({ name, image, handle, credit, description, github, demo }) => {
   return (
     <div>
       <h3>{name}</h3>
@@ -14,7 +14,15 @@ const Card = ({ name, image, handle, credit, description, github }) => {
         )}
       </p>
       <p>{description}</p>
-      <p>TODO: Add GitHub url {github}</p>
+      <button>
+        <a href={github}>GitHub Repo</a>
+      </button>
+      <button>
+        <a href={demo}>Live Demo</a>
+      </button>
+      <br />
+      <br />
+      <br />
     </div>
   )
 }
