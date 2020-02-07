@@ -29,32 +29,46 @@ const Landing = props => {
         <p className={landingStyles.p}>
           Full-Stack Web Developer and Software Engineer
         </p>
-        <button onClick={() => scrollTo("#about")}>About</button>
-        <button onClick={() => scrollTo("#portfolio")}>Portfolio</button>
-        <a
-          href="https://github.com/timothyshores"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={landingStyles.btn}
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/timothyshores/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={landingStyles.btn}
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://twitter.com/timothymshores"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={landingStyles.btn}
-        >
-          Twitter
-        </a>
+        <div className="navigation">
+          <button
+            className={landingStyles.btn}
+            onClick={() => scrollTo("#about")}
+          >
+            About
+          </button>
+          <button
+            className={landingStyles.btn}
+            onClick={() => scrollTo("#portfolio")}
+          >
+            Portfolio
+          </button>
+        </div>
+        <div className="social-links">
+          <a
+            href="https://github.com/timothyshores"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={landingStyles.btn}
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/timothyshores/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={landingStyles.btn}
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://twitter.com/timothymshores"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={landingStyles.btn}
+          >
+            Twitter
+          </a>
+        </div>
       </div>
     </header>
   )
