@@ -1,10 +1,10 @@
 import React from "react"
 
-const Card = ({ name, image, handle, credit, description, github, demo }) => {
+const Card = ({ name, image, handle, credit, description, github, demo, alt }) => {
   return (
     <div>
       <h3>{name}</h3>
-      {image && <img src={image} />}
+          {image && <img src={image} alt={alt}/>}
       <p>
         {handle && credit && (
           <em>
