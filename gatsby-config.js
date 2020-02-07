@@ -40,5 +40,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-smoothscroll`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
   ],
 }
