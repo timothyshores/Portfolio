@@ -1,8 +1,10 @@
 import React from "react"
+import { FullPage, Slide } from "react-full-page"
+
 import Landing from "../components/landing"
-import About from "./about"
-import Portfolio from "./portfolio"
 import Footer from "../components/footer"
+import Portfolio from "./portfolio"
+import About from "./about"
 
 const Index = () => {
   return (
