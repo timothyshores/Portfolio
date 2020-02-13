@@ -1,15 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 
+const Image = styled.img`
+  margin-bottom: 0;
+`
 const Link = styled.a`
   color: black;
   text-decoration: none;
   margin: 10px 0;
   padding: 10px 5px;
 `
-
 const Button = styled.button`
   margin: 0 25px 50px 0;
+`
+const ImageP = styled.p`
+  text-align: right;
 `
 
 const Card = ({
@@ -25,15 +30,15 @@ const Card = ({
   return (
     <div>
       <h3>{name}</h3>
-      {image && <img src={image} alt={alt} />}
-      <p>
+      {image && <Image src={image} alt={alt} />}
+      <ImageP>
         {handle && credit && (
           <em>
             Photo by <a href={`https://unsplash.com/@${handle}`}>{credit}</a> on{" "}
             <a href="https://unsplash.com/">Unsplash</a>
           </em>
         )}
-      </p>
+      </ImageP>
       <p>{description}</p>
       <Button>
         <Link href={github}>GitHub Repo</Link>

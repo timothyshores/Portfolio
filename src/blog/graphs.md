@@ -130,7 +130,7 @@ class Graph:
                 for edge in edges:
                     queue.enqueue(edge)
 
-    # Print each vertex in depth-first orde beginning from starting_vertex.
+    # Print each vertex in depth-first order beginning from starting_vertex.
     def dft(self, starting_vertex):
         # make a stack
         stack = Stack()
