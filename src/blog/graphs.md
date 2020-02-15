@@ -155,4 +155,51 @@ class Graph:
                 # stack them on the stack to be visited
                 for edge in edges:
                     stack.push(edge)
+
+    # Recursive solution for depth first traversal
+    def dft_recursive_solution(self, vertex, visited=set()):
+        # Keep track of the vertices that we have visited  using a set
+        # Add the vertex passed into the method to the visited set
+        visited.add(vertex)
+    
+        # Get the edges from the vertex passed in as an argument
+        edges = self.get_neighbords(vertex)
+        
+        # Base case: the vertex has no edges
+        if len(edges) == 0:
+            return
+        # Else the vertex has edges
+        else:
+            # Iterate through each edge 
+            for edge in edges:
+                # If the current edge is not in the visited set
+                if edge not in visited:
+                    # Recursively call the function with 
+                    self.dft_recursive_solution(edge, visited)
+
+    # Breadth First Search 
+    def bfs(self, starting_vertex, destination_vertex):
+        # Create a queue using the built in Queue data structure
+        queue = Queue
+        # Make a set which will contain the visited vertices
+        visited = set()
+        # Add starting_vertex to the back of queue
+        queue.enqueue([starting_vertex])
+
+        # While there are vertices in the queue
+        while queue.size() > 0:
+            # set current_path to the vertex at the front of the queue
+            current_path = queue.dequeue()
+
+            current_node = current_path[-1]
+            if current_node == destination_vertex
+                return current_path
+            else:
+                if current_node not in visited:
+                    visited.add(current_node)
+                    edges = self.get_neighnors(current_node)
+
+                    for edge in edges:
+                        path_copy = list(current_path)
+                        
 ```
