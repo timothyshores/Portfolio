@@ -8,9 +8,8 @@ const About = () => {
       <Head title="About 🤷‍♂️" />
       <h3 id="about">About</h3>
       <p>
-        Timothy Shores is a full-time full stack web development student at
-        Lambda School. On Friday nights he enjoys staying in and watching Game
-        of Thrones with his girlfriend and learning about GatsbyJS
+        Timothy Shores is a full-time full stack web development student during
+        the day and a part-time Team Lead at Lambda School.
       </p>
     </Layout>
   )
