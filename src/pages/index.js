@@ -8,13 +8,13 @@ import Contact from "../components/contact"
 
 const Index = () => {
   return (
-    <>
+    <div atyle={{overflowX: 'hidden'}}>
       <Landing />
       <About />
       <Portfolio />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 
