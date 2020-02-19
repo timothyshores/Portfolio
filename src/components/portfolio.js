@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Card from "../components/card"
+import Layout from "./layout"
+import Head from "./head"
+import Card from "./card"
 
 import image1 from "../images/victor-freitas-usNAh-a1kgc-unsplash.jpg"
 import image2 from "../images/robin-worrall-FPt10LXK0cg-unsplash.jpg"
@@ -11,7 +11,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <Head title="Portfolio 💻" />
-      <h3 id="portfolio">Portfolio</h3>
+      <h2 id="portfolio">Portfolio</h2>
       <Card
         name="Recruiter Rules"
         image={image3}

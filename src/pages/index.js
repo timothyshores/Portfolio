@@ -1,10 +1,10 @@
 import React from "react"
-import { FullPage, Slide } from "react-full-page"
 
 import Landing from "../components/landing"
 import Footer from "../components/footer"
-import Portfolio from "./portfolio"
-import About from "./about"
+import Portfolio from "../components/portfolio"
+import About from "../components/about"
+import Contact from "../components/contact"
 
 const Index = () => {
   return (
@@ -12,6 +12,7 @@ const Index = () => {
       <Landing />
       <About />
       <Portfolio />
+      <Contact />
       <Footer />
     </>
   )
