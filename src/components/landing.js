@@ -6,6 +6,7 @@ import webm from "../videos/Baga-Beach/WEBM/Baga-Beach.webm"
 import jpg from "../videos/Baga-Beach/Snapshots/Baga-Beach.jpg"
 
 import landingStyles from "./landing.module.scss"
+import styled from "styled-components"
 
 const Landing = props => {
   return (

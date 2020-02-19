@@ -2,6 +2,21 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import headerStyles from "./header.module.scss"
 
+import styled from "styled-components"
+
+const HeaderEl = styled.div`
+  padding: 1rem 0 2rem;
+  display: flex;
+  justify-content: center;
+`
+
+const NavList = styled.div`
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  padding: 0 0 0.75rem;
+`
+
 const Header = props => {
   const data = useStaticQuery(graphql`
     query {
@@ -15,16 +30,16 @@ const Header = props => {
 
   return (
     <div>
-      <header className={headerStyles.header}>
+      <HeaderEl>
         <h1>
           <Link className={headerStyles.title} to="/">
             {" "}
             {data.site.siteMetadata.title}
           </Link>
         </h1>
-      </header>
+      </HeaderEl>
       <nav>
-        <ul className={headerStyles.navList}>
+        <NavList>
           <li>
             <Link
               className={headerStyles.navItem}
@@ -76,7 +91,7 @@ const Header = props => {
               Contact
             </Link>
           </li>
-        </ul>
+        </NavList>
       </nav>
     </div>
   )

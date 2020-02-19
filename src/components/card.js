@@ -12,6 +12,16 @@ const Link = styled.a`
 `
 const Button = styled.button`
   margin: 0 25px 50px 0;
+  border: none;
+  background: #004b40;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0.15rem 0.4rem;
+  text-decoration: none;
+  &:hover {
+    font-size: 1.275rem;
+    letter-spacing: 0.05rem;
+  }
 `
 const ImageP = styled.p`
   text-align: right;
@@ -41,10 +51,10 @@ const Card = ({
       </ImageP>
       <p>{description}</p>
       <Button>
-        <Link href={github}>GitHub Repo</Link>
+        <Link style={{color: "white"}} href={github}>GitHub Repo</Link>
       </Button>{" "}
       <Button>
-        <Link href={demo}>Live Demo</Link>
+          <Link style={{ color: "white" }} href={demo}>Live Demo</Link>
       </Button>
     </div>
   )
