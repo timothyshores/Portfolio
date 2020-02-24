@@ -3,6 +3,13 @@ import styled from "styled-components"
 
 const Image = styled.img`
   margin-bottom: 0;
+  object-fit: cover;
+  height: auto;
+  width: auto;
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  margin: auto;
 `
 const Link = styled.a`
   color: black;
@@ -24,7 +31,7 @@ const Button = styled.button`
   }
 `
 const ImageP = styled.p`
-  text-align: right;
+  text-align: center;
 `
 
 const Card = ({
