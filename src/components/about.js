@@ -13,8 +13,13 @@ const About = () => {
       <Head title="About 🤷‍♂️" />
       <H2 id="about">About</H2>
       <p>
-        Timothy Shores is a full-time full stack web development student during
-        the day and a part-time Team Lead at Lambda School.
+        Full-time full stack web development student with experience in
+        front-end development with React and back-end development with Node.js
+        and Express and part-time Team Lead at Lambda School at night and on
+        weekends. Passionate about learning new technologies, breaking down
+        complex problems and learning from other developers. Over 6 years of
+        experience in entrepreneurship, marketing, advertising, graphic design
+        and an academic background in mathematics and economics.
       </p>
     </Layout>
   )
