@@ -58,10 +58,14 @@ const Card = ({
       </ImageP>
       <p>{description}</p>
       <Button>
-        <Link style={{color: "white"}} href={github}>GitHub Repo</Link>
+        <Link style={{ color: "white" }} href={github}>
+          GitHub Repo
+        </Link>
       </Button>{" "}
       <Button>
-          <Link style={{ color: "white" }} href={demo}>Live Demo</Link>
+        <Link style={{ color: "white" }} href={demo}>
+          Live Demo
+        </Link>
       </Button>
     </div>
   )

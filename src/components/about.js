@@ -13,7 +13,7 @@ const About = () => {
       <Head title="About 🤷‍♂️" />
       <H2 id="about">About</H2>
       <p>
-        Full-time full stack web development student with experience in
+        Full-time full-stack web development student with experience in
         front-end development with React and back-end development with Node.js
         and Express and part-time Team Lead at Lambda School at night and on
         weekends. Passionate about learning new technologies, breaking down
